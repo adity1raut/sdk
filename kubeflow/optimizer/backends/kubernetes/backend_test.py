@@ -19,7 +19,7 @@ It tests KubernetesBackend's behavior across optimization job listing, resource 
 import datetime
 import multiprocessing
 from typing import Optional
-from unittest.mock import Mock, patch, MagicMock
+from unittest.mock import Mock, patch
 import pytest
 from kubeflow_katib_api import models
 from kubeflow.common.types import KubernetesBackendConfig
@@ -31,7 +31,6 @@ from kubeflow.optimizer.types.optimization_types import (
     Objective,
     OptimizationJob,
     Result,
-    Trial,
     TrialConfig,
 )
 from kubeflow.optimizer.types.search_types import ContinuousSearchSpace, Distribution
@@ -50,7 +49,6 @@ from kubeflow.trainer.types import types as trainer_types
 BASIC_OPTIMIZATION_JOB_NAME = "basic-optimization-job"
 OPTIMIZATION_JOB_WITH_BEST_TRIAL = "optimization-job-with-best-trial"
 FAIL_LOGS = "fail_logs"
-LIST_OPTIMIZATION_JOBS = "list_optimization_jobs"
 TORCH_RUNTIME = "torch"
 
 
